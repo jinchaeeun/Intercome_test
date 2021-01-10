@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
-        //오류 부분
+        val but_vib : Button = findViewById(R.id.but_vib)
         but_vib.setOnClickListener {
             vibrator.vibrate(VibrationEffect.createOneShot(1000, 50))
         }
