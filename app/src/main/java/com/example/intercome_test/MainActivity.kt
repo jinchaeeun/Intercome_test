@@ -12,9 +12,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        
+        //진동 기능
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-
+        
         val but_vib : Button = findViewById(R.id.but_vib)
         but_vib.setOnClickListener {
             vibrator.vibrate(VibrationEffect.createOneShot(1000, 50))
