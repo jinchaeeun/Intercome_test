@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val vibrator = getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 
+        //오류 부분
         but_vib.setOnClickListener {
             vibrator.vibrate(VibrationEffect.createOneShot(1000, 50))
         }
